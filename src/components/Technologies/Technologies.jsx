@@ -4,7 +4,7 @@ import { CustomIcon } from '../../icons/CustomIcon'
 
 export const Technologies = () => {
   return (
-    <Box height='auto'>
+    <Box height='auto' id='technologies'>
       <Heading mt='50px' fontWeight='medium'>
         Technologies
       </Heading>

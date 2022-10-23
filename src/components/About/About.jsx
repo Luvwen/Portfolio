@@ -21,15 +21,15 @@ export const About = () => {
           new things. My preferred tools are React and JavaScript.
         </Text>
         <Text mt='35px' fontSize='2xl' fontWeight='light'>
-          I'm on
+          I'm on {''}
           <Link
             color='blue.500'
             href='https://github.com/Luvwen'
             target='_blank'
           >
-            {''} GitHub {''}
+            GitHub
           </Link>
-          and {''}
+          {''} and {''}
           <Link
             color='blue.500'
             href='https://linkedin.com/in/santiago-baliño'

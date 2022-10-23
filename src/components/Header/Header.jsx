@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Flex, Heading, Image, List, ListItem } from '@chakra-ui/react'
 
 import photoPortfolio from './photoPortfolio.jpg'
+import { HashLink } from 'react-router-hash-link'
 
 export const Header = () => {
   return (
@@ -43,10 +44,53 @@ export const Header = () => {
               fontWeight='bold'
               color='gray.600'
             >
-              <ListItem>Work</ListItem>
-              <ListItem pl='35px'>Projects</ListItem>
-              <ListItem pl='35px'>Articles</ListItem>
-              <ListItem pl='35px'>Contact</ListItem>
+              <ListItem
+                _hover={{
+                  bg: 'cyan.100',
+                  borderRadius: '8px'
+                }}
+                p='2px 8px'
+              >
+                <HashLink to='#technologies' smooth>
+                  Technologies
+                </HashLink>
+              </ListItem>
+              <ListItem
+                _hover={{
+                  bg: 'cyan.100',
+                  borderRadius: '8px'
+                }}
+                ml='10px'
+                p='2px 8px'
+              >
+                <HashLink to='#projects' smooth>
+                  Projects
+                </HashLink>
+              </ListItem>
+              <ListItem
+                _hover={{
+                  bg: 'cyan.100',
+                  borderRadius: '8px'
+                }}
+                ml='10px'
+                p='2px 8px'
+              >
+                <HashLink to='#articles' smooth>
+                  Articles
+                </HashLink>
+              </ListItem>
+              <ListItem
+                _hover={{
+                  bg: 'cyan.100',
+                  borderRadius: '8px'
+                }}
+                ml='10px'
+                p='2px 8px'
+              >
+                <HashLink to='#contact' smooth>
+                  Contact
+                </HashLink>
+              </ListItem>
             </List>
           </Box>
         </Flex>

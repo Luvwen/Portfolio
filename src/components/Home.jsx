@@ -4,6 +4,7 @@ import { About } from './About/About'
 import { Box } from '@chakra-ui/react'
 import { Technologies } from './Technologies/Technologies'
 import { Projects } from './Projects/Projects'
+import { Contact } from './Contact/Contact'
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
       <About />
       <Technologies />
       <Projects />
+      <Contact />
     </Box>
   )
 }
