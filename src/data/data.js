@@ -7,7 +7,7 @@ export const myProjects = [
     title: 'Heroes App',
     text: 'Texto de Heroes App y un poquito mas de info para rellenar para la próxima con algúna cosilla',
     image: heroesImg,
-    technologies: ['javascript', 'react'],
+    technologies: ['Javascript', 'React'],
     links: [
       {
         platformName: 'Github',
@@ -23,7 +23,7 @@ export const myProjects = [
     title: 'Cryptocurrency App',
     text: 'Texto de Cryptocurrency App y un poquito mas de info para rellenar para la próxima con algúna cosilla',
     image: cryptoImg,
-    technologies: ['javascript', 'react', 'redux'],
+    technologies: ['Javascript', 'React', 'Redux'],
     links: [
       {
         platformName: 'Github',
@@ -39,7 +39,7 @@ export const myProjects = [
     title: 'Phone store',
     text: 'Texto de Phone store y un poquito mas de info para rellenar para la próxima con algúna cosilla',
     image: phoneImg,
-    technologies: ['javascript', 'react'],
+    technologies: ['Javascript', 'React'],
     links: [
       {
         platformName: 'Github',

@@ -23,15 +23,16 @@ export const ProjectsMap = () => {
             <Flex
               mb='50px'
               border='1px solid gray'
+              borderRadius='10px'
+              overflow='hidden'
               _hover={{
                 boxShadow:
-                  '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
-                transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)',
-                cursor: 'pointer'
+                  '0 14px 28px rgba(0,0,0,0.50), 0 10px 10px rgba(0,0,0,0.22)',
+                transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)'
               }}
             >
               <Image src={project.image} width='60%' height='400px' />
-              <VStack margin='0 auto' spacing={10}>
+              <VStack margin='0 auto' spacing={10} background='cyan.50'>
                 <Heading as='h3' p='40px 15px 0'>
                   {project.title}
                 </Heading>

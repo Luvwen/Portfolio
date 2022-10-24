@@ -75,18 +75,6 @@ export const Header = () => {
                 ml='10px'
                 p='2px 8px'
               >
-                <HashLink to='#articles' smooth>
-                  Articles
-                </HashLink>
-              </ListItem>
-              <ListItem
-                _hover={{
-                  bg: 'cyan.100',
-                  borderRadius: '8px'
-                }}
-                ml='10px'
-                p='2px 8px'
-              >
                 <HashLink to='#contact' smooth>
                   Contact
                 </HashLink>

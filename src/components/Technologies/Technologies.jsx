@@ -26,20 +26,20 @@ export const Technologies = () => {
       >
         <GridItem width='75%'>
           <Flex justifyContent='space-between'>
-            <CustomIcon iconName={'javascript'} />
-            <CustomIcon iconName={'react'} />
-            <CustomIcon iconName={'redux'} />
+            <CustomIcon iconName={'Javascript'} />
+            <CustomIcon iconName={'React'} />
+            <CustomIcon iconName={'Redux'} />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
           <Flex justifyContent='space-around'>
-            <CustomIcon iconName={'git'} />
-            <CustomIcon iconName={'github'} />
+            <CustomIcon iconName={'Git'} />
+            <CustomIcon iconName={'Github'} />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
           <Flex justifyContent='center'>
-            <CustomIcon iconName={'typescript'} />
+            <CustomIcon iconName={'Typescript'} />
           </Flex>
         </GridItem>
       </Grid>

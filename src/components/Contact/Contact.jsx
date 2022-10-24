@@ -78,14 +78,7 @@ export const Contact = () => {
         (response) => console.log(response),
         Swal.fire('¡Excelente!', 'El email fue enviado con éxito', 'success')
       )
-      .then(
-        (error) => console.log(error),
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Parece que algo salió mal...!'
-        })
-      )
+      .then((error) => console.log(error))
 
     resetForm()
   }
@@ -178,7 +171,7 @@ export const Contact = () => {
           type='submit'
           leftIcon={<EmailIcon />}
           colorScheme='teal'
-          mt='12px'
+          mt='20px'
           isDisabled={
             !errors.username && !errors.email && !errors.text ? false : true
           }
