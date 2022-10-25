@@ -29,7 +29,11 @@ export const Home = () => {
     document.documentElement.scrollTop = 0
   }
   return (
-    <Box width='50vw' margin='auto'>
+    <Box
+      width={['100vw', '50vw']}
+      margin='auto'
+      overflow={['hidden', 'visible']}
+    >
       <Header />
       <About />
       <Technologies />

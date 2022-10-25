@@ -7,20 +7,20 @@ export const About = () => {
       <Box
         as='article'
         bg='blue.50'
-        height='350px'
-        borderRadius='8px'
-        mt='100px'
-        padding='35px'
+        height={['auto', '350px']}
+        borderRadius={['15px', '8px']}
+        m={['25px 20px 0 20px', '100px 0 0 0']}
+        p={['15px 20px', '35px']}
       >
-        <Heading fontWeight='medium' fontSize='5xl'>
+        <Heading fontWeight='medium' fontSize={['2xl', '5xl']}>
           👋 Hi, I'm Santiago
         </Heading>
-        <Text mt='15px' fontSize='2xl' fontWeight='light'>
+        <Text mt='15px' fontSize={['lg', '2xl']} fontWeight='light'>
           I'm a web developer from Buenos Aires, AR. Currently im studying
           React. In my spare time I enjoy reading, gaming, practice and learning
           new things. My preferred tools are React and JavaScript.
         </Text>
-        <Text mt='35px' fontSize='2xl' fontWeight='light'>
+        <Text mt={['15px', '35px']} fontSize={['lg', '2xl']} fontWeight='light'>
           I'm on {''}
           <Link
             color='blue.500'

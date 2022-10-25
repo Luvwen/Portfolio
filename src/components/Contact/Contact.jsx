@@ -98,7 +98,7 @@ export const Contact = () => {
   })
 
   return (
-    <Box>
+    <Box m={['0 25px 0', '0']}>
       <Heading mt='50px' fontWeight='medium' id='contact'>
         Contact
       </Heading>
@@ -108,12 +108,12 @@ export const Contact = () => {
         height='5px'
         borderRadius='1000px'
         background='gray.400'
-        mt='40px'
+        mt={['25px', '40px']}
       />
       <FormControl
         as='form'
         onSubmit={handleSubmit}
-        width='60%'
+        width={['100%', '60%']}
         textAlign='center'
         margin='0 auto 100px'
       >
@@ -125,6 +125,7 @@ export const Contact = () => {
             value={values.username}
             onChange={handleChange}
             onBlur={handleBlur}
+            placeholder='Santiago'
             isInvalid={errors.username && touched.username ? true : false}
           />
           {errors.username && touched.username && (
@@ -141,7 +142,7 @@ export const Contact = () => {
             value={values.email}
             onChange={handleChange}
             onBlur={handleBlur}
-            placeholder='username@example.com'
+            placeholder='Username@example.com'
             isInvalid={errors.email && touched.email ? true : false}
           />
           {errors.email && touched.email && (

@@ -3,28 +3,40 @@ import { Box, Flex, Heading, Image, List, ListItem } from '@chakra-ui/react'
 
 import photoPortfolio from './photoPortfolio.jpg'
 import { HashLink } from 'react-router-hash-link'
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 export const Header = () => {
   return (
     <>
       <Box
-        width='50vw'
+        width={['100vw', '50vw']}
         margin='auto'
-        paddingTop='75px
-      '
+        paddingTop={['25px', '75px']}
       >
-        <Flex alignItems='center'>
+        <Flex
+          alignItems='center'
+          flexDirection={['row-reverse', 'row', 'row']}
+          justifyContent={['space-between', 'left']}
+        >
           <Image
             src={photoPortfolio}
             borderRadius='50%'
-            width='100px'
-            height='100px'
+            width={['130px', '100px']}
+            height={['130px', '100px']}
+            display={['none', 'none', 'none', 'block']}
           />
-          <Box ml='35px'>
+          <HamburgerIcon
+            display={['block', 'none']}
+            fontSize='30px'
+            mb='10px'
+            mr={['35px', '0']}
+          />
+          <Box ml='25px'>
             <Heading
               as='h1'
               fontWeight='bold'
-              pb='15px'
+              fontSize={['3xl']}
+              pb={['0', '15px']}
               _after={{
                 content: `''`,
                 display: 'block',
@@ -32,14 +44,14 @@ export const Header = () => {
                 height: '6px',
                 background: 'blue.500',
                 mt: '3%',
-                maxWidth: '30%'
+                maxWidth: ['50%', '30%']
               }}
             >
               Santiago Baliño
             </Heading>
             <List
               listStyleType='none'
-              display='flex'
+              display={['none', 'flex']}
               fontSize='24px'
               fontWeight='bold'
               color='gray.600'

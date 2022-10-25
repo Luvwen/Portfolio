@@ -4,8 +4,8 @@ import { CustomIcon } from '../../icons/CustomIcon'
 
 export const Technologies = () => {
   return (
-    <Box height='auto' id='technologies'>
-      <Heading mt='50px' fontWeight='medium'>
+    <Box height='auto' id='technologies' m={['0 25px 0', '0']}>
+      <Heading mt={['25px', '50px']} fontWeight='medium'>
         Technologies
       </Heading>
       <Divider
@@ -14,32 +14,43 @@ export const Technologies = () => {
         height='5px'
         borderRadius='1000px'
         background='gray.400'
-        mt='40px'
+        mt={['25px', '40px']}
       />
       <Grid
         templateColumns='repeat(1, 1fr)'
         templateRows='repeat(1, 1fr)'
-        rowGap={12}
+        rowGap={[2, 12]}
         columnGap={12}
-        mt='48px'
-        justifyItems='center'
+        mt={['0', '48px']}
+        justifyItems={['start', 'center']}
       >
-        <GridItem width='75%'>
-          <Flex justifyContent='space-between'>
-            <CustomIcon iconName={'Javascript'} />
-            <CustomIcon iconName={'React'} />
-            <CustomIcon iconName={'Redux'} />
+        <GridItem width={['100%', '75%']}>
+          <Flex
+            justifyContent='space-between'
+            flexDirection={['column', 'row']}
+          >
+            <CustomIcon
+              iconName={'Javascript'}
+              width={'90px'}
+              height={'90px'}
+            />
+            <CustomIcon iconName={'React'} width={'90px'} height={'90px'} />
+            <CustomIcon iconName={'Redux'} width={'90px'} height={'90px'} />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
-          <Flex justifyContent='space-around'>
-            <CustomIcon iconName={'Git'} />
-            <CustomIcon iconName={'Github'} />
+          <Flex justifyContent='space-around' flexDirection={['column', 'row']}>
+            <CustomIcon iconName={'Git'} width={'90px'} height={'90px'} />
+            <CustomIcon iconName={'Github'} width={'90px'} height={'90px'} />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
-          <Flex justifyContent='center'>
-            <CustomIcon iconName={'Typescript'} />
+          <Flex justifyContent='center' flexDirection={['column', 'row']}>
+            <CustomIcon
+              iconName={'Typescript'}
+              width={'90px'}
+              height={'90px'}
+            />
           </Flex>
         </GridItem>
       </Grid>

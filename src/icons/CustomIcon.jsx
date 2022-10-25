@@ -10,15 +10,23 @@ const transition = {
   transition: 'all 0.5s cubic-bezier(.25,.8,.25,1)'
 }
 
-export const CustomIcon = ({ iconName }) => {
+export const CustomIcon = ({ iconName, width, height }) => {
   return (
-    <VStack spacing={2} width='150px' transition={transition} _hover={hover}>
+    <VStack
+      spacing={2}
+      width={['100%', '150px']}
+      transition={transition}
+      flexDirection={['row', 'column']}
+      _hover={hover}
+      mt={['25px', '0']}
+    >
       <Image
-        width='100px'
-        height='100px'
+        width={[width, '100px']}
+        height={[height, '100px']}
         src={require(`./iconsImages/${iconName}.png`)}
+        mr={['35px', '0']}
       />
-      <Text fontSize='18px' fontWeight='medium'>
+      <Text fontSize={['24px', '18px']} fontWeight='medium'>
         {iconName}
       </Text>
     </VStack>
