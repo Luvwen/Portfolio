@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Box,
   Divider,
   Flex,
   Heading,
@@ -23,8 +24,8 @@ export const ProjectsMap = () => {
     <>
       {myProjects.map((project, index) => {
         return (
-          <>
-            <LinkBox as='article' key={index}>
+          <Box key={index}>
+            <LinkBox as='article'>
               <Flex
                 mb='30px'
                 border={['none', '1px solid gray']}
@@ -111,7 +112,7 @@ export const ProjectsMap = () => {
                 </Flex>
               </Flex>
             </LinkBox>
-          </>
+          </Box>
         )
       })}
     </>

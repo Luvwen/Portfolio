@@ -30,24 +30,24 @@ export const Technologies = () => {
             flexDirection={['column', 'row']}
           >
             <CustomIcon
-              iconName={'Javascript'}
+              iconName={'javascript'}
               width={'90px'}
               height={'90px'}
             />
-            <CustomIcon iconName={'React'} width={'90px'} height={'90px'} />
-            <CustomIcon iconName={'Redux'} width={'90px'} height={'90px'} />
+            <CustomIcon iconName={'react'} width={'90px'} height={'90px'} />
+            <CustomIcon iconName={'redux'} width={'90px'} height={'90px'} />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
           <Flex justifyContent='space-around' flexDirection={['column', 'row']}>
-            <CustomIcon iconName={'Git'} width={'90px'} height={'90px'} />
-            <CustomIcon iconName={'Github'} width={'90px'} height={'90px'} />
+            <CustomIcon iconName={'git'} width={'90px'} height={'90px'} />
+            <CustomIcon iconName={'github'} width={'90px'} height={'90px'} />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
           <Flex justifyContent='center' flexDirection={['column', 'row']}>
             <CustomIcon
-              iconName={'Typescript'}
+              iconName={'typescript'}
               width={'90px'}
               height={'90px'}
             />
