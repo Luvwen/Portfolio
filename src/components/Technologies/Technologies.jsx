@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Box, Divider, Flex, Grid, GridItem, Heading } from '@chakra-ui/react'
 import { CustomIcon } from '../../icons/CustomIcon'
 
 export const Technologies = () => {
+  const [windowSize, setWindowSize] = useState(getWindowSize())
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize())
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  }, [])
+
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window
+    return { innerWidth, innerHeight }
+  }
   return (
     <Box height='auto' id='technologies' m={['0 25px 0', '0']}>
       <Heading mt={['25px', '50px']} fontWeight='medium'>
@@ -31,25 +49,41 @@ export const Technologies = () => {
           >
             <CustomIcon
               iconName={'javascript'}
-              width={'90px'}
-              height={'90px'}
+              width={windowSize.innerWidth > '375' ? '90px' : '75px'}
+              height={windowSize.innerWidth > '375' ? '90px' : '75px'}
             />
-            <CustomIcon iconName={'react'} width={'90px'} height={'90px'} />
-            <CustomIcon iconName={'redux'} width={'90px'} height={'90px'} />
+            <CustomIcon
+              iconName={'react'}
+              width={windowSize.innerWidth > '375' ? '90px' : '75px'}
+              height={windowSize.innerWidth > '375' ? '90px' : '75px'}
+            />
+            <CustomIcon
+              iconName={'redux'}
+              width={windowSize.innerWidth > '375' ? '90px' : '75px'}
+              height={windowSize.innerWidth > '375' ? '90px' : '75px'}
+            />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
           <Flex justifyContent='space-around' flexDirection={['column', 'row']}>
-            <CustomIcon iconName={'git'} width={'90px'} height={'90px'} />
-            <CustomIcon iconName={'github'} width={'90px'} height={'90px'} />
+            <CustomIcon
+              iconName={'git'}
+              width={windowSize.innerWidth > '375' ? '90px' : '75px'}
+              height={windowSize.innerWidth > '375' ? '90px' : '75px'}
+            />
+            <CustomIcon
+              iconName={'github'}
+              width={windowSize.innerWidth > '375' ? '90px' : '75px'}
+              height={windowSize.innerWidth > '375' ? '90px' : '75px'}
+            />
           </Flex>
         </GridItem>
         <GridItem width='75%'>
           <Flex justifyContent='center' flexDirection={['column', 'row']}>
             <CustomIcon
               iconName={'typescript'}
-              width={'90px'}
-              height={'90px'}
+              width={windowSize.innerWidth > '375' ? '90px' : '75px'}
+              height={windowSize.innerWidth > '375' ? '90px' : '75px'}
             />
           </Flex>
         </GridItem>

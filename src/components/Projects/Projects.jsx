@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Divider, Heading } from '@chakra-ui/react'
+import { Box, Divider, Heading, Stack } from '@chakra-ui/react'
 
 import { ProjectsMap } from './ProjectsMap'
 
@@ -15,9 +15,13 @@ export const Projects = () => {
         background='gray.400'
         mt={['25px', '40px']}
       />
-      <Box margin='50px auto 0'>
+      <Stack
+        margin='50px auto 0'
+        spacing={[0, 50]}
+        alignItems={['start', 'center']}
+      >
         <ProjectsMap />
-      </Box>
+      </Stack>
     </Box>
   )
 }

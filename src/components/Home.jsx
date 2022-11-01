@@ -28,6 +28,7 @@ export const Home = () => {
   const handleGoToTop = () => {
     document.documentElement.scrollTop = 0
   }
+
   return (
     <Box
       width={['100vw', '50vw']}
