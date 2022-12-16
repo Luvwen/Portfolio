@@ -3,7 +3,7 @@ import { Box, Divider, Heading, Stack } from '@chakra-ui/react'
 
 import { ProjectsMap } from './ProjectsMap'
 
-export const Projects = () => {
+export const Projects = ({darkMode}) => {
   return (
     <Box as='section' m={['50px 25px 0', '50px 0 0']}>
       <Heading id='projects'>Projects</Heading>
@@ -20,7 +20,7 @@ export const Projects = () => {
         spacing={[0, 50]}
         alignItems={['start', 'center']}
       >
-        <ProjectsMap />
+        <ProjectsMap darkMode={darkMode}/>
       </Stack>
     </Box>
   )

@@ -18,16 +18,17 @@ import { myProjects } from '../../data/data'
 
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
-export const ProjectsMap = () => {
+export const ProjectsMap = ({darkMode}) => {
   return (
     <>
       {myProjects.map((project, index) => {
         return (
-          <Stack>
-            <Box key={index} width={['100%', '750px']} height={['100%']}>
+          <Stack key={index}>
+            <Box width={['100%', '750px']} height={['100%']}>
               <LinkBox as='article' maxHeight={['100%', '300px']}>
                 <Flex
                   mb='30px'
+                  background={darkMode ? '#4e525a' : 'cyan.50'}
                   border={['1px solid gray', '1px solid gray']}
                   borderRadius={['none', '10px']}
                   overflow='hidden'
@@ -49,11 +50,12 @@ export const ProjectsMap = () => {
                     ]}
                   />
                   <Flex
+                    color={darkMode ? 'whitesmoke' : 'black'}
                     margin={['0', '0 auto']}
                     flexDirection={['column']}
                     justifyContent={['flex-start']}
                     alignItems={['center']}
-                    background={['', 'cyan.50']}
+                    
                   >
                     <Heading
                       as='h3'
@@ -77,13 +79,13 @@ export const ProjectsMap = () => {
                     <Stack mt='30px' direction={['row', 'row']}>
                       {project.technologies.map((technology, idx) => {
                         return (
-                          <UnorderedList listStyleType='none' key={idx} ml='0'>
+                          <UnorderedList  listStyleType='none' key={idx} ml='0'>
                             <Flex as={ListItem} alignItems='center'>
                               <ListIcon
                                 as={ChevronRightIcon}
                                 display={['none', 'block']}
                               />
-                              <Text fontWeight='md' color='gray.500'>
+                              <Text fontWeight='semibold' color={darkMode ? 'whitesmoke' : 'black'}>
                                 {technology}
                               </Text>
                             </Flex>

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Flex, Heading, Image, List, ListItem } from '@chakra-ui/react'
+import { Box, Flex, Heading, Icon, Image, List, ListItem } from '@chakra-ui/react'
 
 import photoPortfolio from './photoPortfolio.jpg'
 import { HashLink } from 'react-router-hash-link'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
 
-export const Header = () => {
+export const Header = ({darkMode, setDarkMode}) => {
   return (
     <>
       <Box
@@ -47,18 +47,22 @@ export const Header = () => {
                 maxWidth: ['50%', '30%']
               }}
             >
-              Santiago Baliño
+              Santiago Baliño <span>
+              <Icon m='0 0 3px 25px' cursor={['pointer']} fontSize='xl' onClick={()=> setDarkMode(!darkMode)}> 
+                  {darkMode ? <MoonIcon/> : <SunIcon />}
+                </Icon>
+              </span>
             </Heading>
             <List
               listStyleType='none'
               display={['none', 'flex']}
               fontSize='24px'
               fontWeight='bold'
-              color='gray.600'
+              color={darkMode ? 'whitesmoke':'gray.600'}
             >
               <ListItem
                 _hover={{
-                  bg: 'cyan.100',
+                  bg: darkMode ? 'pink' : 'purple.200',
                   borderRadius: '8px'
                 }}
                 p='2px 8px'
@@ -69,7 +73,7 @@ export const Header = () => {
               </ListItem>
               <ListItem
                 _hover={{
-                  bg: 'cyan.100',
+                  bg: darkMode ? 'pink' : 'purple.200',
                   borderRadius: '8px'
                 }}
                 ml='10px'
@@ -81,7 +85,7 @@ export const Header = () => {
               </ListItem>
               <ListItem
                 _hover={{
-                  bg: 'cyan.100',
+                  bg: darkMode ? 'pink' : 'purple.200',
                   borderRadius: '8px'
                 }}
                 ml='10px'
@@ -91,6 +95,7 @@ export const Header = () => {
                   Contact
                 </HashLink>
               </ListItem>
+                
             </List>
           </Box>
         </Flex>

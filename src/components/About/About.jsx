@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box, Heading, Link, Text } from '@chakra-ui/react'
 
-export const About = () => {
+export const About = ({darkMode}) => {
   return (
     <Box as='section'>
       <Box
         as='article'
-        bg='blue.50'
+        bg={darkMode ? '#4e525a' : 'blue.50'}
         height={['auto', '350px']}
         borderRadius={['15px', '8px']}
         m={['25px 20px 0 20px', '100px 0 0 0']}

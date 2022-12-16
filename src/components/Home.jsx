@@ -9,6 +9,7 @@ import { ArrowUpIcon } from '@chakra-ui/icons'
 
 export const Home = () => {
   const [isShow, setIsShow] = useState('none')
+  const [darkMode, setDarkMode] = useState(false)
 
   window.onscroll = function () {
     handlesScrollFunction()
@@ -31,16 +32,21 @@ export const Home = () => {
 
   return (
     <Box
+    background={darkMode ? '#262A31' : 'white'}
+    color={darkMode ?  'white': 'black'}
+    pb='25px'
+    >
+      <Box
       width={['100vw', '50vw']}
       margin='auto'
       overflow={['hidden', 'visible']}
-    >
-      <Header />
-      <About />
-      <Technologies />
-      <Projects />
-      <Contact />
-      <Button
+      >
+        <Header darkMode={darkMode}setDarkMode={setDarkMode}/>
+        <About darkMode={darkMode}/>
+        <Technologies />
+        <Projects darkMode={darkMode}/>
+        <Contact />
+        <Button
         onClick={handleGoToTop}
         colorScheme='red'
         display={isShow}
@@ -51,9 +57,10 @@ export const Home = () => {
         width='50px'
         height='50px'
         borderRadius='50%'
-      >
+        >
         <ArrowUpIcon fontSize={20} />
       </Button>
+      </Box>
     </Box>
   )
 }

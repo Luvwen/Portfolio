@@ -115,7 +115,9 @@ export const Contact = () => {
         onSubmit={handleSubmit}
         width={['100%', '60%']}
         textAlign='center'
-        margin='0 auto 100px'
+        margin='0 auto'
+        padding='0 auto 100px'
+
       >
         <VStack alignItems='left' mt='25px'>
           <FormLabel htmlFor='username'>Nombre *</FormLabel>
@@ -177,7 +179,7 @@ export const Contact = () => {
             !errors.username && !errors.email && !errors.text ? false : true
           }
         >
-          Email
+          Contact me
         </Button>
       </FormControl>
     </Box>
