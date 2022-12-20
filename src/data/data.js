@@ -1,7 +1,7 @@
-import cryptoImg from './images/crypto.png'
+import cryptoImg from './images/cryptocurrencies.png'
 import heroesImg from './images/heroes.png'
-import phoneImg from './images/phone.png'
-import dbmoviespage from './images/dbmoviespage.png'
+import phoneImg from './images/phoneshop.png'
+import dbmoviespage from './images/dbmoviepage.jpg'
 export const myProjects = [
   {
     title: 'Db Movies Page',
@@ -39,7 +39,7 @@ export const myProjects = [
     title: 'Heroes App',
     text: 'Web estática con información de superheroes de Marvel y Dc',
     image: heroesImg,
-    technologies: ['javascript', 'react'],
+    technologies: ['javascript', 'react', ],
     links: [
       {
         platformName: 'Github',

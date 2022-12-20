@@ -23,7 +23,8 @@ export const About = ({darkMode}) => {
         <Text mt={['15px', '35px']} fontSize={['lg', '2xl']} fontWeight='light'>
           I'm on {''}
           <Link
-            color='blue.500'
+            color='#ff77a9'
+            fontWeight='semibold'
             href='https://github.com/Luvwen'
             target='_blank'
           >
@@ -31,7 +32,9 @@ export const About = ({darkMode}) => {
           </Link>
           {''} and {''}
           <Link
-            color='blue.500'
+            color='#ff77a9'
+            fontWeight='semibold'
+
             href='https://linkedin.com/in/santiago-baliño'
             target='_blank'
           >

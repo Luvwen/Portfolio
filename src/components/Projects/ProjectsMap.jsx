@@ -16,7 +16,7 @@ import {
 
 import { myProjects } from '../../data/data'
 
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { StarIcon } from '@chakra-ui/icons'
 
 export const ProjectsMap = ({darkMode}) => {
   return (
@@ -53,9 +53,8 @@ export const ProjectsMap = ({darkMode}) => {
                     color={darkMode ? 'whitesmoke' : 'black'}
                     margin={['0', '0 auto']}
                     flexDirection={['column']}
-                    justifyContent={['flex-start']}
                     alignItems={['center']}
-                    
+                    minWidth='400px'
                   >
                     <Heading
                       as='h3'
@@ -68,7 +67,7 @@ export const ProjectsMap = ({darkMode}) => {
                     <Text
                       noOfLines={2}
                       textAlign={['center', 'center']}
-                      p={['10px 15px 0', '0 15px']}
+                      p={['10px 15px 0', '0 50px']}
                       wordBreak='break-word'
                       fontSize={['18px']}
                       fontWeight={['light']}
@@ -76,13 +75,14 @@ export const ProjectsMap = ({darkMode}) => {
                     >
                       {project.text}
                     </Text>
-                    <Stack mt='30px' direction={['row', 'row']}>
+                    <Stack spacing='0' direction={['row', 'column']} display='grid' gridTemplateColumns={'repeat(2, 1fr)'} gridRowGap='10px' width='100%' maxWidth='287px' mt='30px' ml='15%'>
                       {project.technologies.map((technology, idx) => {
                         return (
-                          <UnorderedList  listStyleType='none' key={idx} ml='0'>
+                          <UnorderedList  listStyleType='none' key={idx} ml='0' >
                             <Flex as={ListItem} alignItems='center'>
                               <ListIcon
-                                as={ChevronRightIcon}
+                                as={StarIcon}
+                                fontSize='sm'
                                 display={['none', 'block']}
                               />
                               <Text fontWeight='semibold' color={darkMode ? 'whitesmoke' : 'black'}>
@@ -93,7 +93,7 @@ export const ProjectsMap = ({darkMode}) => {
                         )
                       })}
                     </Stack>
-                    <HStack position='relative' mt={['0', '15px']} spacing={25}>
+                    <HStack position='relative' mt={['0', '15px']} spacing={25} pb='15px'>
                       {project.links.map((link, index) => {
                         return (
                           <Link

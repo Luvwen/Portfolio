@@ -62,7 +62,7 @@ export const Header = ({darkMode, setDarkMode}) => {
             >
               <ListItem
                 _hover={{
-                  bg: darkMode ? 'pink' : 'purple.200',
+                  bg: darkMode ? '#ff77a9' : '#8bf6ff',
                   borderRadius: '8px'
                 }}
                 p='2px 8px'
@@ -73,7 +73,7 @@ export const Header = ({darkMode, setDarkMode}) => {
               </ListItem>
               <ListItem
                 _hover={{
-                  bg: darkMode ? 'pink' : 'purple.200',
+                  bg: darkMode ? '#ff77a9' : '#8bf6ff',
                   borderRadius: '8px'
                 }}
                 ml='10px'
@@ -85,7 +85,7 @@ export const Header = ({darkMode, setDarkMode}) => {
               </ListItem>
               <ListItem
                 _hover={{
-                  bg: darkMode ? 'pink' : 'purple.200',
+                  bg: darkMode ? '#ff77a9' : '#8bf6ff',
                   borderRadius: '8px'
                 }}
                 ml='10px'
