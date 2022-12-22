@@ -11,6 +11,8 @@ const transition = {
 }
 
 export const CustomIcon = ({ iconName, width, height }) => {
+  const technologyUppercase = iconName.charAt(0).toUpperCase() + iconName.slice(1)
+
   return (
     <VStack
       spacing={2}
@@ -27,7 +29,7 @@ export const CustomIcon = ({ iconName, width, height }) => {
         mr={['35px', '0']}
       />
       <Text fontSize={['24px', '18px']} fontWeight='medium'>
-        {iconName}
+        {technologyUppercase}
       </Text>
     </VStack>
   )

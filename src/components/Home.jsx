@@ -6,6 +6,7 @@ import { Technologies } from './Technologies/Technologies'
 import { Projects } from './Projects/Projects'
 import { Contact } from './Contact/Contact'
 import { ArrowUpIcon } from '@chakra-ui/icons'
+import { Sidebar } from './Sidebar/Sidebar'
 
 export const Home = () => {
   const [isShow, setIsShow] = useState('none')
@@ -42,6 +43,7 @@ export const Home = () => {
       overflow={['hidden', 'visible']}
       >
         <Header darkMode={darkMode}setDarkMode={setDarkMode}/>
+        <Sidebar />
         <About darkMode={darkMode}/>
         <Technologies />
         <Projects darkMode={darkMode}/>

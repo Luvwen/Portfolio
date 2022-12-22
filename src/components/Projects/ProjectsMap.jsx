@@ -77,6 +77,7 @@ export const ProjectsMap = ({darkMode}) => {
                     </Text>
                     <Stack spacing='0' direction={['row', 'column']} display='grid' gridTemplateColumns={'repeat(2, 1fr)'} gridRowGap='10px' width='100%' maxWidth='287px' mt='30px' ml='15%'>
                       {project.technologies.map((technology, idx) => {
+                        const technologyUppercase = technology.charAt(0).toUpperCase() + technology.slice(1)
                         return (
                           <UnorderedList  listStyleType='none' key={idx} ml='0' >
                             <Flex as={ListItem} alignItems='center'>
@@ -86,7 +87,7 @@ export const ProjectsMap = ({darkMode}) => {
                                 display={['none', 'block']}
                               />
                               <Text fontWeight='semibold' color={darkMode ? 'whitesmoke' : 'black'}>
-                                {technology}
+                                {technologyUppercase}
                               </Text>
                             </Flex>
                           </UnorderedList>
