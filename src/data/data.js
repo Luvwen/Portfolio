@@ -1,11 +1,11 @@
 import cryptoImg from './images/cryptocurrencies.png'
 import heroesImg from './images/heroes.png'
 import phoneImg from './images/phoneshop.png'
-import dbmoviespage from './images/dbmoviepage.jpg'
+import dbmoviespage from './images/dbmoviespage.png'
 export const myProjects = [
   {
     title: 'Db Movies Page',
-    text: 'Página inspirada en The Movie DB',
+    text: 'Página inspirada en The Movie DB donde se puede crear cuenta, agregar a favoritos y visualizar distintas categorias de películas y series, hecha enteramente con Typescript y Redux',
     image: dbmoviespage,
     technologies: ['typescript', 'react', 'redux', 'Firebase'],
     links: [
@@ -21,7 +21,7 @@ export const myProjects = [
   },
   {
     title: 'Phone store',
-    text: 'Landing page para comprar celulares',
+    text: 'Landing page para comprar celulares con carrito, sistema de favoritos y tracking de ordenes de compra con Firebase',
     image: phoneImg,
     technologies: ['javascript', 'react', 'Firebase'],
     links: [

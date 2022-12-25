@@ -1,124 +1,73 @@
 import React from 'react'
 import {
   Box,
-  Flex,
   Heading,
   HStack,
   Image,
   Link,
   LinkBox,
-  ListIcon,
   ListItem,
   Stack,
+  StackItem,
   Text,
-  UnorderedList
+  UnorderedList,
 } from '@chakra-ui/react'
 
 import { myProjects } from '../../data/data'
-
-import { StarIcon } from '@chakra-ui/icons'
 
 export const ProjectsMap = ({darkMode}) => {
   return (
     <>
       {myProjects.map((project, index) => {
         return (
-          <Stack key={index}>
-            <Box width={['100%', '750px']} height={['100%']}>
-              <LinkBox as='article' maxHeight={['100%', '300px']}>
-                <Flex
-                  mb='30px'
-                  background={darkMode ? '#4e525a' : 'cyan.50'}
-                  border={['1px solid gray', '1px solid gray']}
-                  borderRadius={['none', '10px']}
-                  overflow='hidden'
-                  _hover={{
-                    boxShadow:
-                      '10px 14px 28px rgba(0,0,0,0.50), 10px 10px 10px rgba(0,0,0,0.22)',
-                    transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)'
-                  }}
-                  flexDirection={['column', 'row']}
-                >
-                  <Image
-                    src={project.image}
-                    width={['100%', '50%']}
-                    height={['250px', '300px']}
+          <Stack key={index} display='flex' flexDirection='row' justifyContent='space-between'
+          
+          >
+            <Image src={project.image}
+                    width={['350px','400px','450px','580px']}
+                    height={['300px','320px','360px']}
                     borderRadius={['none', 'none']}
-                    boxShadow={[
-                      '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-                      ''
-                    ]}
-                  />
-                  <Flex
-                    color={darkMode ? 'whitesmoke' : 'black'}
-                    margin={['0', '0 auto']}
-                    flexDirection={['column']}
-                    alignItems={['center']}
-                    minWidth='400px'
-                  >
-                    <Heading
-                      as='h3'
-                      p={['25px 0 0 0', '20px 15px 12px']}
-                      textAlign='center'
-                      fontSize='3xl'
-                    >
-                      {project.title}
-                    </Heading>
-                    <Text
-                      noOfLines={2}
-                      textAlign={['center', 'center']}
-                      p={['10px 15px 0', '0 50px']}
-                      wordBreak='break-word'
-                      fontSize={['18px']}
-                      fontWeight={['light']}
-                      mt={['0', '15px']}
-                    >
-                      {project.text}
-                    </Text>
-                    <Stack spacing='0' direction={['row', 'column']} display='grid' gridTemplateColumns={'repeat(2, 1fr)'} gridRowGap='10px' width='100%' maxWidth='287px' mt='30px' ml='15%'>
-                      {project.technologies.map((technology, idx) => {
-                        const technologyUppercase = technology.charAt(0).toUpperCase() + technology.slice(1)
-                        return (
-                          <UnorderedList  listStyleType='none' key={idx} ml='0' >
-                            <Flex as={ListItem} alignItems='center'>
-                              <ListIcon
-                                as={StarIcon}
-                                fontSize='sm'
-                                display={['none', 'block']}
-                              />
-                              <Text fontWeight='semibold' color={darkMode ? 'whitesmoke' : 'black'}>
+                    
+            />
+            <Stack spacing={3} display='flex' justifyContent='right' alignItems='end' minHeight='100%' pt='35px'>
+              <Heading as='h4' size='sm' color={darkMode ? '#64ffda' : 'blue.300'}>Featured Project</Heading>
+              <Heading as='h1' size='lg' color='blue.600'>{project.title}</Heading>
+              <Box position='relative' zIndex='2' width={['calc(100% + 7vw)','calc(100% + 5vw)','calc(100% + 3vw)']}>
+              <StackItem mt='10px' bg={darkMode ? '#112240': 'gray.200'} p='15px' borderRadius='2px' textAlign='right' position='relative'>
+                  <Text  fontWeight='semibold'color={darkMode ? 'gray.200' : 'pink.400'}>{project.text}</Text>
+              </StackItem>
+              </Box>
+              <Stack spacing='0' listStyleType='none' as={UnorderedList} display='flex' flexDirection='row' justifyContent='flex-end' width='100%' >
+              {project.technologies.map((technology, idx) => {
+                const technologyUppercase = technology.charAt(0).toUpperCase() + technology.slice(1)
+                return (
+                              <ListItem key={idx} fontWeight='semibold' color={darkMode ? 'gray.200' : 'pink.400'} pr='15px'>
                                 {technologyUppercase}
-                              </Text>
-                            </Flex>
-                          </UnorderedList>
+                              </ListItem>
                         )
                       })}
-                    </Stack>
-                    <HStack position='relative' mt={['0', '15px']} spacing={25} pb='15px'>
-                      {project.links.map((link, index) => {
+              </Stack>
+              <HStack width='100%' display='flex' flexDirection='row' justifyContent='flex-end' spacing='2'>
+              {project.links.map((link, index) => {
                         return (
                           <Link
                             href={link.platformLink}
                             key={index}
                             target='_blank'
-                            color='blue.500'
-                            position='absolute'
-                            top='25'
+                            color='blue.300'
                             pb={['50px', '0']}
                             _hover={{
                               color: 'cyan.500',
-                              transition: '0.3s'
+                              transition: '0.3s',
+                              textDecoration: 'underline'
                             }}
                           >
                             {link.platformName}
                           </Link>
                         )
                       })}
-                    </HStack>
-                  </Flex>
-                </Flex>
-              </LinkBox>
-            </Box>
+              </HStack>
+            </Stack>
           </Stack>
         )
       })}
