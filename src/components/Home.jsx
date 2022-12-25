@@ -43,7 +43,7 @@ export const Home = () => {
       overflow={['hidden', 'visible']}
       >
         <Header darkMode={darkMode}setDarkMode={setDarkMode}/>
-        <Sidebar />
+        <Sidebar darkMode={darkMode}/>
         <About darkMode={darkMode}/>
         <Technologies />
         <Projects darkMode={darkMode}/>
