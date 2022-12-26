@@ -26,10 +26,9 @@ export const ProjectsMap = ({darkMode}) => {
             <Image src={project.image}
                     width={['300px','580px']}
                     height={['250px']}
-                    borderRadius={['none', 'none']}
-                    
+                    borderRadius={['none', 'none']}   
             />
-            <Stack spacing={3} position='inherit' display='flex' justifyContent={['right']} alignItems={['center','end']} minHeight='100%'  width={['85%','100%']} ml='20px'>
+            <Stack spacing={3} position='inherit' display='flex' justifyContent={['flex-end']} alignItems={['center','flex-end']} minHeight='100%'  width={['85%','100%']} ml='20px'>
               {/* <Heading as='h4' size='sm' color={darkMode ? '#64ffda' : 'blue.300'}>Featured Project</Heading> */}
               <Heading as='h1' size='lg' color='blue.600'>{project.title}</Heading>
               <Box position={['static','relative']} zIndex={['0','2']} width={['100%','calc(100% + 3vw)']}>
