@@ -37,7 +37,7 @@ export const myProjects = [
   },
   {
     title: 'Heroes App',
-    text: 'Web estática con información de superheroes de Marvel y Dc',
+    text: 'Web estática con información de superheroes de Marvel y Dc y su respectivo buscador',
     image: heroesImg,
     technologies: ['javascript', 'react', ],
     links: [
@@ -53,7 +53,7 @@ export const myProjects = [
   },
   {
     title: 'Cryptocurrency App',
-    text: 'Página informativa sobre las distintas criptomonedas vigentes',
+    text: 'Página informativa sobre las distintas criptomonedas vigentes y sus mas recientes noticias ',
     image: cryptoImg,
     technologies: ['javascript', 'react', 'redux'],
     links: [
