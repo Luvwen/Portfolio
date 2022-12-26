@@ -55,12 +55,12 @@ export const Home = () => {
         position='fixed'
         bottom='20px'
         right='30px'
-        z-index='99'
+        zIndex='99'
         width='50px'
         height='50px'
         borderRadius='50%'
         >
-        <ArrowUpIcon fontSize={20} />
+          <ArrowUpIcon fontSize={20}/>
       </Button>
       </Box>
     </Box>
