@@ -6,15 +6,15 @@ import cvIcon from '../../icons/iconsImages/curriculum.svg'
 
 export const Sidebar = ({ darkMode }) => {
   return (
-    <Stack  position='fixed' top='40%' left='0' minHeight='200px' width='50px' display={['none','flex']} justifyContent='space-around' alignItems='center' bg={darkMode ? '#7a7e87' : 'cyan.200'}>
+    <Stack  position='fixed' top='40%' left='0' minHeight='200px' width='50px' display={['none','flex']} justifyContent='space-around' alignItems='center' bg={darkMode ? '#7a7e87' : 'gray.200'}>
         <Link href='https://www.linkedin.com/in/santiago-bali%C3%B1o/' target='_blank' rel='noopener noreferrer'>
             <Image src={linkedinIcon} width='30px' height='30px' cursor='pointer' bg='#f5f5f5'/>
         </Link>
         <Link href='https://github.com/Luvwen' target='_blank' rel='noopener noreferrer'>
-            <Image src={githubIcon} width='30px' height='30px' cursor='pointer' bg='#f5f5f5' borderRadius={darkMode ? '50%' : '0'}/>
+            <Image src={githubIcon} width='30px' height='30px' cursor='pointer' bg='#f5f5f5' />
         </Link>
         <Link href='https://docdro.id/d3eVnfY' target='_blank' rel='noopener noreferrer'>
-            <Image src={cvIcon} width='30px' height='30px' cursor='pointer' bg='#f5f5f5'/>
+            <Image src={cvIcon} width='30px' height='30px' cursor='pointer' color={darkMode ? 'black' : ''}/>
         </Link>
     </Stack>
   )
