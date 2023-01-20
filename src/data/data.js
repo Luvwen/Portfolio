@@ -7,7 +7,7 @@ export const myProjects = [
     title: 'Tic-Tac-Toe',
     text: 'Juego Tic-Tac-Toe donde podes jugar contra otro jugador, diseño responsive y mobile first.',
     image: tictactoe,
-    technologies: ['typescript', 'react', 'Chakra UI'],
+    technologies: ['javascript', 'react', 'Chakra UI'],
     links: [
       {
         platformName: 'Github',
